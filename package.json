@@ -1,0 +1,19 @@
+{
+  "name": "blockchain",
+  "version": "1.0.0",
+  "description": "Blockchain Prototype on NodeJS",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ilyakmet/Blockchain.git"
+  },
+  "author": "ilyakmet",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ilyakmet/Blockchain/issues"
+  },
+  "homepage": "https://github.com/ilyakmet/Blockchain#readme"
+}

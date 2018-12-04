@@ -2,7 +2,6 @@
 Blockchain Prototype on NodeJS
 
 ## Getting started
-=======
 
 ### Import
 ```

@@ -20,28 +20,29 @@ class Block {
 
 module.exports.Block = Block;
 
+
 class Blockchain {
   constructor () {
-    this.activation = false;
-    this.chainArray = [];
-    this.chainDict = {};
+    this.activation_ = false;
+    this.chainArray_ = [];
+    this.chainDict_ = {};
     this.newGenesisBlock();
   }
 
   addBlock (data_) {
-    var prevBlock = this.chainArray[this.chainArray.length - 1];
-    var newBlock = new Block(this.chainArray.lenght, data_, prevBlock.hash_);
-    this.chainArray.push(newBlock);
-    this.chainDict[newBlock.hash_.toString()] = this.chainArray.length;
+    var prevBlock = this.chainArray_[this.chainArray_.length - 1];
+    var newBlock = new Block(this.chainArray_.length, data_, prevBlock.hash_);
+    this.chainArray_.push(newBlock);
+    this.chainDict_[newBlock.hash_.toString()] = this.chainArray_.length;
     
   }
 
   newGenesisBlock () {
-    if (!this.activation) {
+    if (!this.activation_) {
       var newBlock = new Block(0, 'Genesis Block', NaN);
-      this.chainArray.push(newBlock);
-      this.chainDict[newBlock.hash_] = 0;
-      this.activation = true;
+      this.chainArray_.push(newBlock);
+      this.chainDict_[newBlock.hash_] = 0;
+      this.activation_ = true;
     }
   }
 }

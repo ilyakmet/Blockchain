@@ -23,7 +23,7 @@ newBlockchain.addBlock('some data');
 newBlockchain.chainArray_
 ```
 
-### Get block by blockHash
+### Get blockNumber by blockHash
 ```
 newBlockchain.chainDict_['blockHash'];
 ```

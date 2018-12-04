@@ -29,21 +29,29 @@ class Blockchain {
     this.newGenesisBlock();
   }
 
-  addBlock (data_) {
+  addBlock(data_) {
     var prevBlock = this.chainArray_[this.chainArray_.length - 1];
     var newBlock = new Block(this.chainArray_.length, data_, prevBlock.hash_);
     this.chainArray_.push(newBlock);
     this.chainDict_[newBlock.hash_.toString()] = this.chainArray_.length;
-    
+    this.showBlock(newBlock);
   }
 
-  newGenesisBlock () {
+  newGenesisBlock() {
     if (!this.activation_) {
       var newBlock = new Block(0, 'Genesis Block', NaN);
       this.chainArray_.push(newBlock);
-      this.chainDict_[newBlock.hash_] = 0;
+      this.chainDict_[newBlock.hash_.toString()] = 0;
       this.activation_ = true;
+      this.showBlock(newBlock);
     }
+  }
+
+  showBlock(block_) {
+    console.log('Index: ' + block_.index_ + '\n'
+          + 'Prev: ' + block_.prevBlockHash_ + '\n'
+          + 'Data: ' + block_.data_ + '\n'
+          + 'Hash: ' + block_.hash_ + '\n' + '=======');
   }
 }
 

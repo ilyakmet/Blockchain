@@ -4,7 +4,7 @@
   "description": "Blockchain Prototype on NodeJS",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --watchAll"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/ilyakmet/Blockchain/issues"
   },
-  "homepage": "https://github.com/ilyakmet/Blockchain#readme"
+  "homepage": "https://github.com/ilyakmet/Blockchain#readme",
+  "dependencies": {
+    "crypto-js": "^3.1.9-1"
+  },
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
 }

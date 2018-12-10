@@ -36,11 +36,9 @@ class Block {
     }
 
     static blockHash(block_) {
+    	
         //destructuring
         const { timestamp_, lastHash_, data_ } = block_;
-        // const timestamp = block_.timestamp_;
-        // const lastHash = block_.lastHash_;
-        // const data = block_.data_;
         return Block.hash(timestamp_, lastHash_, data_);
     }
 }

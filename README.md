@@ -29,16 +29,16 @@ $ HTTP_PORT={HTTP_PORT} P2P_PORT={P2P_PORT} PEERS=ws://localhost:5001, ws://loca
 
 ### Get blocks
 ```
-curl -X GET \
-  http://localhost:3001/blocks
+$ curl -X GET \
+  	http://localhost:3001/blocks
 ```
 
 ### Add blocks
 ```
-curl -X POST \
-  http://localhost:3001/mine \
-  -H 'Content-Type: application/json' \
-  -d '{
-	"data":"foo"
-}'
+$ curl -X POST \
+	  http://localhost:3001/mine \
+	  -H 'Content-Type: application/json' \
+	  -d '{
+		"data":"foo"
+	}'
 ```

@@ -12,11 +12,10 @@ class Block {
     }
     
     toString(){
-        return `Block - 
-        Timestamp : ${this.timestamp_}
-        Last Hash : ${this.lastHash_.substring(0,10)}
-        Hash      : ${this.hash_.substring(0,10)}
-        Data      : ${this.data_}`;
+        return `[Timestamp : ${this.timestamp_}`
+        + `\nLast Hash : ${this.lastHash_.substring(0,10)}`
+        + `\nHash      : ${this.hash_.substring(0,10)}`
+        + `\nData      : ${this.data_}]`;
     }
     
     static genesis() {
@@ -36,7 +35,7 @@ class Block {
     }
 
     static blockHash(block_) {
-    	
+
         //destructuring
         const { timestamp_, lastHash_, data_ } = block_;
         return Block.hash(timestamp_, lastHash_, data_);

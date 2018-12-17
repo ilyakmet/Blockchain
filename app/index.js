@@ -32,7 +32,7 @@ app.get('/blocks',(req, res) => {
 //api to add blocks
 app.post('/mine',(req, res) => {
     const block = blockchain.addBlock(req.body.data);
-    console.log(`New block added: ${block.toString()}`);
+    console.log(`New block added:\n${block.toString()}`);
     res.redirect('/blocks');
     p2pserver.syncChain();
 });
